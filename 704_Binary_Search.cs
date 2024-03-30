@@ -1,4 +1,3 @@
-//https://leetcode.com/problems/binary-search/description/
 public class Solution {
 
     public int recursiveSearch(int low, int middle, int high, int[] nums, int target){
@@ -26,6 +25,11 @@ public class Solution {
     }
 
     public int Search(int[] nums, int target) {
+        
+        if (nums.Length == 0) {
+            return -1;
+        }
+
         return recursiveSearch(0, (nums.Length-1) / 2, nums.Length-1, nums, target);         
     }
 }
