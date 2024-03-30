@@ -26,7 +26,8 @@ public class Solution {
         
         // didnt find target -> Adjust new search area
         if (target > nums[middle]){
-            low = middle + 1;
+            //enforce array length as highest bound possible
+            low = middle + 1 == nums.Length ?  middle : middle + 1;
         } else if (target < nums[middle]) {
             //enforce 0 as lowest bound possible
             high = middle - 1 < 0 ? 0 : middle - 1;
